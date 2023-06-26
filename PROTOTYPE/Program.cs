@@ -7,10 +7,10 @@
     /// </summary>
         static void Main()
         {
-            IBaseClass myObject = new ImplementationOne(1);
+            BaseClass myObject = new ImplementationOne(1);
             myObject.GetId();
 
-            IBaseClass clone = myObject.Clone();
+            BaseClass clone = myObject.Clone();
             clone.GetId();
 
             myObject = new ImplementationTwo(2);

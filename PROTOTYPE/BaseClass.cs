@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace PROTOTYPE
 {
-    internal class BaseClass
+    abstract class BaseClass
     {
+        public int Id { get; }
+
+        public BaseClass(int id)
+        {
+            Id = id;
+        }
+
+        public abstract BaseClass Clone();
+        public void GetId()
+        {
+            Console.WriteLine($"Создан объект с Id {Id}");
+        }
     }
 }

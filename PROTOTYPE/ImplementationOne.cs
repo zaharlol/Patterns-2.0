@@ -6,21 +6,15 @@ using System.Threading.Tasks;
 
 namespace PROTOTYPE
 {
-    internal class ImplementationOne : IBaseClass
+    internal class ImplementationOne : BaseClass
     {
-        int a;
-        public ImplementationOne(int A) 
+        public ImplementationOne(int id) : base(id)
         {
-            A = a;
-        }
-        public IBaseClass Clone()
-        {
-            return new ImplementationOne(1);
-        }
 
-        public void GetId()
+        }
+        public override BaseClass Clone()
         {
-            Console.WriteLine("Содан объект с Id 1");
+            return new ImplementationOne(Id);
         }
     }
 }
